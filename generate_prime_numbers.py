@@ -37,5 +37,3 @@ def generate_prime_numbers(last_number):
 					list_of_prime_numbers.append(number)
 		number+=1
 	return list_of_prime_numbers
-
-generate_prime_numbers(-1)
