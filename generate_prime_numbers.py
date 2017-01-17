@@ -6,17 +6,17 @@
 2. Iterate from 2 to (y/2)-1 and check the modulus of each number with y
 3. If modulus = 0, break. If modulus is always above 0, add the number y to a return list
 """
-class  NegativeNumberError(Exception):
-	def __init__(self, message):
-		# super( NegativeNumber, self).__init__()
-		self.message = message
+# class  NegativeNumberError(Exception):
+# 	def __init__(self, expression , message):
+# 		self.message = message
+# 		self.expression = expression
 		
 
 def generate_prime_numbers(last_number):
 	if(type(last_number) != int):
 		raise TypeError("Please pass an integer as a parameter")
 	if(last_number<0):
-		raise NegativeNumberError("Please pass a positive integer")
+		raise Exception("Please pass a positive integer")
 
 	list_of_prime_numbers = []
 	number = 0
@@ -37,3 +37,5 @@ def generate_prime_numbers(last_number):
 					list_of_prime_numbers.append(number)
 		number+=1
 	return list_of_prime_numbers
+
+generate_prime_numbers(-1)
